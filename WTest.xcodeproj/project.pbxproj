@@ -12,6 +12,11 @@
 		1F217E8E2228601C0024D537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F217E8C2228601C0024D537 /* Main.storyboard */; };
 		1F217E902228601E0024D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F217E8F2228601E0024D537 /* Assets.xcassets */; };
 		1F217E932228601E0024D537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F217E912228601E0024D537 /* LaunchScreen.storyboard */; };
+		1F217E9D2228791A0024D537 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217E9C2228791A0024D537 /* ApiClient.swift */; };
+		1F217E9F222941220024D537 /* ZipcodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217E9E222941220024D537 /* ZipcodeRouter.swift */; };
+		1F217EA2222943E90024D537 /* ZipcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EA1222943E90024D537 /* ZipcodeService.swift */; };
+		1F217EA522295AE00024D537 /* Zipcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EA422295AE00024D537 /* Zipcode.swift */; };
+		1F217EA822295BAD0024D537 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EA722295BAD0024D537 /* NetworkRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1F217E8F2228601E0024D537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F217E922228601E0024D537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F217E942228601E0024D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F217E9C2228791A0024D537 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		1F217E9E222941220024D537 /* ZipcodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipcodeRouter.swift; sourceTree = "<group>"; };
+		1F217EA1222943E90024D537 /* ZipcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipcodeService.swift; sourceTree = "<group>"; };
+		1F217EA422295AE00024D537 /* Zipcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zipcode.swift; sourceTree = "<group>"; };
+		1F217EA722295BAD0024D537 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 		1F217E872228601C0024D537 /* WTest */ = {
 			isa = PBXGroup;
 			children = (
+				1F217EA322295AD20024D537 /* Models */,
+				1F217E9A222878CA0024D537 /* Network */,
 				1F217E882228601C0024D537 /* AppDelegate.swift */,
 				1F217E8A2228601C0024D537 /* ViewController.swift */,
 				1F217E8C2228601C0024D537 /* Main.storyboard */,
@@ -62,6 +74,49 @@
 				1F217E942228601E0024D537 /* Info.plist */,
 			);
 			path = WTest;
+			sourceTree = "<group>";
+		};
+		1F217E9A222878CA0024D537 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F217EA622295B950024D537 /* Protocols */,
+				1F217EA0222943D80024D537 /* Services */,
+				1F217E9B222878D80024D537 /* Router */,
+				1F217E9C2228791A0024D537 /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1F217E9B222878D80024D537 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1F217E9E222941220024D537 /* ZipcodeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1F217EA0222943D80024D537 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F217EA1222943E90024D537 /* ZipcodeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1F217EA322295AD20024D537 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F217EA422295AE00024D537 /* Zipcode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F217EA622295B950024D537 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1F217EA722295BAD0024D537 /* NetworkRouter.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F217E8B2228601C0024D537 /* ViewController.swift in Sources */,
+				1F217E9F222941220024D537 /* ZipcodeRouter.swift in Sources */,
 				1F217E892228601C0024D537 /* AppDelegate.swift in Sources */,
+				1F217EA2222943E90024D537 /* ZipcodeService.swift in Sources */,
+				1F217EA522295AE00024D537 /* Zipcode.swift in Sources */,
+				1F217E9D2228791A0024D537 /* ApiClient.swift in Sources */,
+				1F217EA822295BAD0024D537 /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

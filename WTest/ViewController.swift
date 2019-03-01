@@ -13,6 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let client = ZipcodeService()
+        client.getZipcpdes(ZipcodeRouter.zipcodes) { (zipcodesResponse) in
+            switch zipcodesResponse {
+            case .success(let zipcodes):
+                print(zipcodes)
+            case .error(let error):
+                print(error)
+            }
+        }
     }
 
 
