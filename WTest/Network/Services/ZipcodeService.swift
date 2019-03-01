@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 struct ZipcodeService: ApiClient {
     
-    func getZipcpdes(_ router: NetworkRouter, completion: @escaping (ApiResponse<[Zipcode]>) -> Void) {
+    func getZipcpdes(_ router: NetworkRouter, completion: @escaping (ApiResponse<[JSONZipcode]>) -> Void) {
         let request = router.request
         getFile(with: request) { (resp: ApiResponse<URL>) in
             
@@ -19,8 +20,25 @@ struct ZipcodeService: ApiClient {
                 case .success(let fileUrl):
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let zipcodes = try decoder.decode([Zipcode].self, from: try self.handleFile(with: fileUrl))
-                    completion(.success(zipcodes))
+                    var zipcodes = try decoder.decode([JSONZipcode].self, from: try self.handleFile(with: fileUrl))
+                    
+                    let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                    privateContext.parent = CoreDataManager.shared.persistentContainer.viewContext
+                    
+                    zipcodes.forEach({ code in
+                        let zipcode = Zipcode(context: privateContext)
+                        zipcode.numCodPostal = code.numCodPostal
+                        zipcode.extCodPostal = code.extCodPostal
+                        zipcode.desigPostal = code.desigPostal
+                    })
+                    
+                    do {
+                        try privateContext.save()
+                        try privateContext.parent?.save()
+                        completion(.success(zipcodes))
+                    } catch {
+                        completion(.error(error))
+                    }
                 case .error(let error):
                     completion(.error(error))
                 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Zipcode: Codable {
+struct JSONZipcode: Codable {
     var numCodPostal: String
     var extCodPostal: String
     var desigPostal: String

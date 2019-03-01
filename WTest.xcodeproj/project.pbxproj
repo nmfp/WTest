@@ -19,6 +19,8 @@
 		1F217EAB22295ED90024D537 /* ZipcodesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EAA22295ED90024D537 /* ZipcodesController.swift */; };
 		1F217EAD22295F340024D537 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EAC22295F340024D537 /* MainTabBarController.swift */; };
 		1F217EAF22296BA80024D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F217EAE22296BA80024D537 /* Assets.xcassets */; };
+		1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */; };
+		1F217EB52229A2AF0024D537 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB42229A2AF0024D537 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1F217EAA22295ED90024D537 /* ZipcodesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipcodesController.swift; sourceTree = "<group>"; };
 		1F217EAC22295F340024D537 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1F217EAE22296BA80024D537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F217EB1222971870024D537 /* ZipcodeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZipcodeModel.xcdatamodel; sourceTree = "<group>"; };
+		1F217EB42229A2AF0024D537 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		1F217E872228601C0024D537 /* WTest */ = {
 			isa = PBXGroup;
 			children = (
+				1F217EB32229A2870024D537 /* CoreData */,
 				1F217EA322295AD20024D537 /* Models */,
 				1F217E9A222878CA0024D537 /* Network */,
 				1F217EA922295EA60024D537 /* Ex1 */,
@@ -131,6 +136,15 @@
 				1F217EAA22295ED90024D537 /* ZipcodesController.swift */,
 			);
 			path = Ex1;
+			sourceTree = "<group>";
+		};
+		1F217EB32229A2870024D537 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1F217EB42229A2AF0024D537 /* CoreDataManager.swift */,
+				1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +224,11 @@
 				1F217E892228601C0024D537 /* AppDelegate.swift in Sources */,
 				1F217EA2222943E90024D537 /* ZipcodeService.swift in Sources */,
 				1F217EA522295AE00024D537 /* Zipcode.swift in Sources */,
+				1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */,
 				1F217E9D2228791A0024D537 /* ApiClient.swift in Sources */,
 				1F217EAD22295F340024D537 /* MainTabBarController.swift in Sources */,
 				1F217EA822295BAD0024D537 /* NetworkRouter.swift in Sources */,
+				1F217EB52229A2AF0024D537 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +430,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1F217EB1222971870024D537 /* ZipcodeModel.xcdatamodel */,
+			);
+			currentVersion = 1F217EB1222971870024D537 /* ZipcodeModel.xcdatamodel */;
+			path = ZipcodeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F217E7D2228601C0024D537 /* Project object */;
 }
