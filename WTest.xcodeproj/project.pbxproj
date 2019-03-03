@@ -21,6 +21,11 @@
 		1F217EAF22296BA80024D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F217EAE22296BA80024D537 /* Assets.xcassets */; };
 		1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */; };
 		1F217EB52229A2AF0024D537 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB42229A2AF0024D537 /* CoreDataManager.swift */; };
+		1FF6FC5F222BFB3A00F21EF8 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC5E222BFB3A00F21EF8 /* AppConfiguration.swift */; };
+		1FF6FC64222BFB6C00F21EF8 /* TextFieldListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC62222BFB6C00F21EF8 /* TextFieldListCell.swift */; };
+		1FF6FC65222BFB6C00F21EF8 /* TextFieldListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC63222BFB6C00F21EF8 /* TextFieldListController.swift */; };
+		1FF6FC68222BFB7800F21EF8 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC67222BFB7800F21EF8 /* WebController.swift */; };
+		1FF6FC6B222BFCFB00F21EF8 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC6A222BFCFB00F21EF8 /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		1F217EAE22296BA80024D537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F217EB1222971870024D537 /* ZipcodeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZipcodeModel.xcdatamodel; sourceTree = "<group>"; };
 		1F217EB42229A2AF0024D537 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1FF6FC5E222BFB3A00F21EF8 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		1FF6FC62222BFB6C00F21EF8 /* TextFieldListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldListCell.swift; sourceTree = "<group>"; };
+		1FF6FC63222BFB6C00F21EF8 /* TextFieldListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldListController.swift; sourceTree = "<group>"; };
+		1FF6FC67222BFB7800F21EF8 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
+		1FF6FC6A222BFCFB00F21EF8 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +82,15 @@
 		1F217E872228601C0024D537 /* WTest */ = {
 			isa = PBXGroup;
 			children = (
+				1FF6FC69222BFCE100F21EF8 /* Extensions */,
+				1FF6FC5D222BFB3A00F21EF8 /* Configuration */,
 				1F217EB32229A2870024D537 /* CoreData */,
 				1F217EA322295AD20024D537 /* Models */,
 				1F217E9A222878CA0024D537 /* Network */,
 				1F217EA922295EA60024D537 /* Ex1 */,
+				1FF6FC60222BFB6100F21EF8 /* Ex2 */,
+				1FF6FC61222BFB6C00F21EF8 /* Ex3 */,
+				1FF6FC66222BFB7800F21EF8 /* Ex4 */,
 				1F217E882228601C0024D537 /* AppDelegate.swift */,
 				1F217EAC22295F340024D537 /* MainTabBarController.swift */,
 				1F217E8A2228601C0024D537 /* ViewController.swift */,
@@ -145,6 +160,46 @@
 				1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1FF6FC5D222BFB3A00F21EF8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6FC5E222BFB3A00F21EF8 /* AppConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		1FF6FC60222BFB6100F21EF8 /* Ex2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ex2;
+			sourceTree = "<group>";
+		};
+		1FF6FC61222BFB6C00F21EF8 /* Ex3 */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6FC62222BFB6C00F21EF8 /* TextFieldListCell.swift */,
+				1FF6FC63222BFB6C00F21EF8 /* TextFieldListController.swift */,
+			);
+			path = Ex3;
+			sourceTree = "<group>";
+		};
+		1FF6FC66222BFB7800F21EF8 /* Ex4 */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6FC67222BFB7800F21EF8 /* WebController.swift */,
+			);
+			path = Ex4;
+			sourceTree = "<group>";
+		};
+		1FF6FC69222BFCE100F21EF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6FC6A222BFCFB00F21EF8 /* Extension+UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,13 +275,18 @@
 			files = (
 				1F217EAB22295ED90024D537 /* ZipcodesController.swift in Sources */,
 				1F217E8B2228601C0024D537 /* ViewController.swift in Sources */,
+				1FF6FC6B222BFCFB00F21EF8 /* Extension+UIView.swift in Sources */,
+				1FF6FC68222BFB7800F21EF8 /* WebController.swift in Sources */,
 				1F217E9F222941220024D537 /* ZipcodeRouter.swift in Sources */,
 				1F217E892228601C0024D537 /* AppDelegate.swift in Sources */,
 				1F217EA2222943E90024D537 /* ZipcodeService.swift in Sources */,
 				1F217EA522295AE00024D537 /* Zipcode.swift in Sources */,
+				1FF6FC5F222BFB3A00F21EF8 /* AppConfiguration.swift in Sources */,
+				1FF6FC65222BFB6C00F21EF8 /* TextFieldListController.swift in Sources */,
 				1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */,
 				1F217E9D2228791A0024D537 /* ApiClient.swift in Sources */,
 				1F217EAD22295F340024D537 /* MainTabBarController.swift in Sources */,
+				1FF6FC64222BFB6C00F21EF8 /* TextFieldListCell.swift in Sources */,
 				1F217EA822295BAD0024D537 /* NetworkRouter.swift in Sources */,
 				1F217EB52229A2AF0024D537 /* CoreDataManager.swift in Sources */,
 			);
@@ -376,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DESTINATION_URL = "";
 				DEVELOPMENT_TEAM = JBEYETDGSB;
 				INFOPLIST_FILE = WTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DESTINATION_URL = "https://www.google.pt";
 				DEVELOPMENT_TEAM = JBEYETDGSB;
 				INFOPLIST_FILE = WTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -18,16 +18,20 @@ class MainTabBarController: UITabBarController {
     
     private func setupViewControllers() {
         let zipcodesController = setupViewController(with: "Zipcodes", iconTitle: "Zipcodes", iconImage: #imageLiteral(resourceName: "mailbox"), rootViewController: ZipcodesController())
+        let textFieldListController = setupViewController(with: "TextField List", iconTitle: "Ex3", iconImage: nil, rootViewController: TextFieldListController())
+        let webController = setupViewController(with: "Web", iconTitle: "Ex4", iconImage: nil, rootViewController: WebController())
         viewControllers = [
-            zipcodesController
+            zipcodesController,
+            textFieldListController,
+            webController
         ]
     }
     
-    private func setupViewController(with title: String, iconTitle: String, iconImage: UIImage, rootViewController: UIViewController = UIViewController()) -> UINavigationController {
+    private func setupViewController(with title: String, iconTitle: String, iconImage: UIImage?, rootViewController: UIViewController = UIViewController()) -> UINavigationController {
         rootViewController.tabBarItem.title = title
         rootViewController.tabBarItem.image = iconImage
         rootViewController.tabBarItem.selectedImage = iconImage
-        rootViewController.title = title
+        rootViewController.title = iconTitle
         return UINavigationController(rootViewController: rootViewController)
     }
     
