@@ -25,7 +25,8 @@ struct ZipcodeService: ApiClient {
                     let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
                     privateContext.parent = CoreDataManager.shared.persistentContainer.viewContext
                     
-                    zipcodes.forEach({ code in
+                    let zipcodes2 = zipcodes[0...100]
+                    zipcodes2.forEach({ code in
                         let zipcode = Zipcode(context: privateContext)
                         zipcode.numCodPostal = code.numCodPostal
                         zipcode.extCodPostal = code.extCodPostal
