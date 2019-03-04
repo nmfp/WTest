@@ -18,10 +18,12 @@ class MainTabBarController: UITabBarController {
     
     private func setupViewControllers() {
         let zipcodesController = setupViewController(with: "Zipcodes", iconTitle: "Zipcodes", iconImage: #imageLiteral(resourceName: "mailbox"), rootViewController: ZipcodesController())
+        let imageTableController = setupViewController(with: "Random List", iconTitle: "Ex2", iconImage: nil, rootViewController: ImageTableController())
         let textFieldListController = setupViewController(with: "TextField List", iconTitle: "Ex3", iconImage: nil, rootViewController: TextFieldListController())
         let webController = setupViewController(with: "Web", iconTitle: "Ex4", iconImage: nil, rootViewController: WebController())
         viewControllers = [
             zipcodesController,
+            imageTableController,
             textFieldListController,
             webController
         ]
