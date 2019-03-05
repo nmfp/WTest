@@ -22,6 +22,8 @@
 		1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB0222971870024D537 /* ZipcodeModel.xcdatamodeld */; };
 		1F217EB52229A2AF0024D537 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F217EB42229A2AF0024D537 /* CoreDataManager.swift */; };
 		1F4004E8222DACBC00A5FAE1 /* ImageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4004E7222DACBC00A5FAE1 /* ImageTableController.swift */; };
+		1F4004EA222DB38700A5FAE1 /* HeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4004E9222DB38700A5FAE1 /* HeaderImageView.swift */; };
+		1F4004EC222DB53200A5FAE1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4004EB222DB53200A5FAE1 /* HeaderView.swift */; };
 		1FF6FC5F222BFB3A00F21EF8 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC5E222BFB3A00F21EF8 /* AppConfiguration.swift */; };
 		1FF6FC64222BFB6C00F21EF8 /* TextFieldListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC62222BFB6C00F21EF8 /* TextFieldListCell.swift */; };
 		1FF6FC65222BFB6C00F21EF8 /* TextFieldListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6FC63222BFB6C00F21EF8 /* TextFieldListController.swift */; };
@@ -47,6 +49,8 @@
 		1F217EB1222971870024D537 /* ZipcodeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZipcodeModel.xcdatamodel; sourceTree = "<group>"; };
 		1F217EB42229A2AF0024D537 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1F4004E7222DACBC00A5FAE1 /* ImageTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableController.swift; sourceTree = "<group>"; };
+		1F4004E9222DB38700A5FAE1 /* HeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageView.swift; sourceTree = "<group>"; };
+		1F4004EB222DB53200A5FAE1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1FF6FC5E222BFB3A00F21EF8 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		1FF6FC62222BFB6C00F21EF8 /* TextFieldListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldListCell.swift; sourceTree = "<group>"; };
 		1FF6FC63222BFB6C00F21EF8 /* TextFieldListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldListController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				1F4004E7222DACBC00A5FAE1 /* ImageTableController.swift */,
+				1F4004E9222DB38700A5FAE1 /* HeaderImageView.swift */,
+				1F4004EB222DB53200A5FAE1 /* HeaderView.swift */,
 			);
 			path = Ex2;
 			sourceTree = "<group>";
@@ -282,9 +288,11 @@
 				1FF6FC6B222BFCFB00F21EF8 /* Extension+UIView.swift in Sources */,
 				1FF6FC68222BFB7800F21EF8 /* WebController.swift in Sources */,
 				1F217E9F222941220024D537 /* ZipcodeRouter.swift in Sources */,
+				1F4004EC222DB53200A5FAE1 /* HeaderView.swift in Sources */,
 				1F217E892228601C0024D537 /* AppDelegate.swift in Sources */,
 				1F217EA2222943E90024D537 /* ZipcodeService.swift in Sources */,
 				1F217EA522295AE00024D537 /* Zipcode.swift in Sources */,
+				1F4004EA222DB38700A5FAE1 /* HeaderImageView.swift in Sources */,
 				1FF6FC5F222BFB3A00F21EF8 /* AppConfiguration.swift in Sources */,
 				1FF6FC65222BFB6C00F21EF8 /* TextFieldListController.swift in Sources */,
 				1F217EB2222971870024D537 /* ZipcodeModel.xcdatamodeld in Sources */,
