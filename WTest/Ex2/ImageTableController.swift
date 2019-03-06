@@ -23,6 +23,11 @@ class ImageTableController: UITableViewController {
         setupNavigationBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+    }
+    
     private func setupNavigationBar(with factor: CGFloat = 0.0) {
         navigationController?.navigationBar.backgroundColor = UIColor(white: 1.0, alpha: factor)
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(white: 1.0 - factor, alpha: 1.0)]

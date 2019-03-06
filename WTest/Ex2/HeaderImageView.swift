@@ -8,26 +8,41 @@
 
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 class HeaderImageView: UIImageView {
-    func loadImageFromUrl(from string: String) {
+    
+    var imageUrlString: String?
+    
+    func loadImageFromUrl(from urlString: String, completion: ((Error) -> Void)? = nil) {
+        guard let url = URL(string: urlString) else { return }
         
-        guard let url = URL(string: string) else { return }
+        imageUrlString = urlString
+        image = nil
+        
+        if let imageCached = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageCached
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
-                
+                completion?(error!)
                 return
             }
             guard let resp = response as? HTTPURLResponse, 200...299 ~= resp.statusCode else {
+                completion?(ApiError.badResponse)
                 return
             }
             
             DispatchQueue.main.async {
                 let imageToCache = UIImage(data: data!)
-                self.image = imageToCache
+                imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
+                
+                if self.imageUrlString == urlString {
+                    self.image = imageToCache
+                }
             }
-            
-            
         }.resume()
         
     }

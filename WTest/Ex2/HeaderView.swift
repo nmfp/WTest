@@ -12,9 +12,24 @@ class HeaderView: UIView {
     
     var urlString: String! {
         didSet {
-            imageView.loadImageFromUrl(from: urlString)
+            imageView.loadImageFromUrl(from: urlString) { error in
+                DispatchQueue.main.async { [weak self] in
+                    guard let weakSelf = self else { return }
+                    weakSelf.addSubview(weakSelf.errorLabel)
+                    weakSelf.errorLabel.anchor(top: weakSelf.topAnchor, leading: weakSelf.leadingAnchor, bottom: weakSelf.bottomAnchor, trailing: weakSelf.trailingAnchor)
+                    weakSelf.errorLabel.text = error.localizedDescription
+                }
+            }
         }
     }
+    
+    lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     lazy var imageView: HeaderImageView = {
         let iv = HeaderImageView()
